@@ -1,0 +1,48 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+
+    <Grid Margin="20" Background="AliceBlue" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        
+          <TextBlock Grid.ColumnSpan="4" Margin="10" FontSize="24" FontWeight="Bold"  Background="White" TextAlignment="Right" Text="{Binding Path=Display, Mode=TwoWay}"/>          
+        
+        <Button Content="7" Grid.Column="0" Grid.Row="1" Background="BurlyWood" FontSize="14" FontWeight="Bold" Margin="10" Command="{StaticResource CalculatorCommand}" CommandParameter="7"/>
+        <Button Content="8" Grid.Column="1" Grid.Row="1" Background="BurlyWood" FontSize="14" FontWeight="Bold" Margin="10" Command="{StaticResource CalculatorCommand}" CommandParameter="8"/>
+        <Button Content="9" Grid.Column="2" Grid.Row="1" Background="BurlyWood" FontSize="14" FontWeight="Bold" Margin="10" Command="{StaticResource CalculatorCommand}" CommandParameter="9"/>
+        <Button Content="+" Grid.Column="3" Grid.Row="1" Background="BurlyWood" FontSize="14" FontWeight="Bold" Margin="10" Command="{StaticResource CalculatorCommand}" CommandParameter="+"/>
+        <Button Content="4" Grid.Column="0" Grid.Row="2" Background="BurlyWood" FontSize="14" FontWeight="Bold" Margin="10"  Command="{StaticResource CalculatorCommand}" CommandParameter="4"/>
+        <Button Content="5" Grid.Column="1" Grid.Row="2" Background="BurlyWood" FontSize="14" FontWeight="Bold" Margin="10"  Command="{StaticResource CalculatorCommand}" CommandParameter="5"/>
+        <Button Content="6" Grid.Column="2" Grid.Row="2" Background="BurlyWood" FontSize="14" FontWeight="Bold" Margin="10"  Command="{StaticResource CalculatorCommand}" CommandParameter="6"/>
+        <Button Content="-" Grid.Column="3" Grid.Row="2" Background="BurlyWood" FontSize="14" FontWeight="Bold" Margin="10"  Command="{StaticResource CalculatorCommand}" CommandParameter="-"/>
+        <Button Content="1" Grid.Column="0" Grid.Row="3" Background="BurlyWood" FontSize="14" FontWeight="Bold" Margin="10" Command="{StaticResource CalculatorCommand}" CommandParameter="1"/>
+        <Button Content="2" Grid.Column="1" Grid.Row="3" Background="BurlyWood" FontSize="14" FontWeight="Bold" Margin="10"  Command="{StaticResource CalculatorCommand}" CommandParameter="2"/>
+        <Button Content="3" Grid.Column="2" Grid.Row="3" Background="BurlyWood" FontSize="14" FontWeight="Bold" Margin="10"  Command="{StaticResource CalculatorCommand}" CommandParameter="3"/>
+        <Button Content="*" Grid.Column="3" Grid.Row="3" Background="BurlyWood" FontSize="14" FontWeight="Bold" Margin="10"  Command="{StaticResource CalculatorCommand}" CommandParameter="*"/>
+        <Button Content="0" Grid.Column="0" Grid.Row="4" Background="BurlyWood" FontSize="14" FontWeight="Bold" Margin="10"  Command="{StaticResource CalculatorCommand}" CommandParameter="0"/>
+        <Button Content="BackSpace" IsEnabled="{Binding IsBackSpaceButtonEnabled}" Grid.Column="1" Grid.Row="4" Background="BurlyWood" FontSize="14" FontWeight="Bold" Margin="10" Command="{StaticResource BackSpaceCommand}"/>
+        <Button Grid.Column="2" Grid.Row="4" Background="BurlyWood" Content="=" FontSize="14" FontWeight="Bold" Margin="10" Command="{StaticResource ResultCommand}"/> 
+        <Button Grid.Column="3" Grid.Row="4" Background="BurlyWood" Content="/" FontSize="14" FontWeight="Bold" Margin="10"  Command="{StaticResource CalculatorCommand}" CommandParameter="/"/>
+
+
+    </Grid>
+</Window>
